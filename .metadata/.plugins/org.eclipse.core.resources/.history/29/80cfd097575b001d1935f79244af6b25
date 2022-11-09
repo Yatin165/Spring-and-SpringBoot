@@ -1,0 +1,13 @@
+package com.springbootrelation.manytooneentity;
+
+import java.time.LocalDate;
+
+public class Loan {
+	private int loanid;
+	private long amount;
+	private LocalDate issuedDate;
+	private Customer customer;
+	private String status;
+
+	
+}

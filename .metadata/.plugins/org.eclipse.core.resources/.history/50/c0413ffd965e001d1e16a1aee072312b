@@ -1,0 +1,54 @@
+package com.passenger.service;
+
+import java.util.Optional;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.passenger.entity.Passenger;
+import com.passenger.repository.PassengerRepository;
+
+@Service
+public class PassengerService {
+	
+	@Autowired
+	PassengerRepository passengerRepository;
+	
+
+	public Passenger addDataToDatabase(Passenger payload) {
+	        return passengerRepository.save(payload);
+
+	}
+
+	public Passenger getDataFromDatabase(int id) {
+		Optional<Passenger> optionalobject = passengerRepository.findById(id);
+		Passenger passenger = optionalobject.get();
+		return passenger;
+	}
+
+	@Transactional
+	public String updateDataInDatabase(Passenger payload) {
+		Optional<Passenger> optional = passengerRepository.findById(payload.getId());
+		if (optional.isEmpty()) {
+			return "Passenger " + payload.getId() + " not in database";
+		} else {
+		    Passenger passengerInDB = optional.get();
+			passengerInDB.setName(payload.getName());
+			passengerInDB.setPhoneNumber(payload.getPhoneNumber());
+			return "Data Updated";
+		}
+	}
+
+	public String deleteDataFromDatabase(int id) {
+		Optional<Passenger> optional = passengerRepository.findById(id);
+
+		if (optional.isEmpty()) {
+			return "Passenger " + id + " is not in database";
+		} else {
+			passengerRepository.deleteById(id);
+			return "Passenger " + id + " data is deleted";
+		}
+	}
+}

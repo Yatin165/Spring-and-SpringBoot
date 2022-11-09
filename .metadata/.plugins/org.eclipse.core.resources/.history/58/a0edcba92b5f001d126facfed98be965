@@ -1,0 +1,5 @@
+package com.resttemplate.controller;
+
+public class RestTemplateController {
+
+}

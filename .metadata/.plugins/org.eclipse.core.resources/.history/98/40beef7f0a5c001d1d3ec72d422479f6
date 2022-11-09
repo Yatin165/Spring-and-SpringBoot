@@ -1,0 +1,19 @@
+package com.springbootrelation.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.springbootrelation.onetomany.AxisBankCustomer;
+import com.springbootrelation.repository.AxisBankRepo;
+
+@Service
+public class AxisBankService {
+	
+	@Autowired
+	private AxisBankRepo axisrepo;
+	
+	public AxisBankCustomer addDataToDataBase(AxisBankCustomer ax) {
+		return axisrepo.save(ax);
+	}
+
+}

@@ -1,0 +1,19 @@
+package com.airline.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class IndigoAirline {
+
+	@Id
+	private int seatnumber;
+	private int flightnumber;
+	private int passengernumber;
+	private int seatavailable;
+	private String origin;
+	private String destination;
+	
+	
+	
+}

@@ -1,0 +1,70 @@
+package com.example.service;
+
+import java.time.LocalDate;
+import java.util.Optional;
+import javax.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.entity.Project;
+import com.example.exception.ProjectNotFoundException;
+import com.example.repository.ProjectRepository;
+
+@Service
+public class ProjectService {
+
+	@Autowired 
+	ProjectRepository proRepo;
+	
+	public String addProject(Project project) {
+		if (proRepo.findById(project.getpId()).isPresent()) {
+			return "Data of Person " + project.getpId() + " is already added";
+		}
+		Project saveobj = proRepo.save(project);
+		return "Data of the person " + saveobj.getpName() + " added";
+	}
+	
+	public Object getProjectByProjectId(int id) {
+		Optional<Project> optionalObj = proRepo.findById(id);
+		if(optionalObj.isPresent()) {
+			Project project = optionalObj.get();
+		return project;
+		}else {
+			return "This Person is not in Database";
+		}
+	}
+	
+	@Transactional
+	public String updateDataofProject(Project project) {
+		Optional<Project> optionalObj = proRepo.findById(project.getpId());
+		if (optionalObj.isEmpty()) {
+			return "Project " + project.geteId() + " is not a part of organization";
+		} else {
+			Project projectInDB = optionalObj.get();
+			projectInDB.setpName(project.getpName());
+			projectInDB.setpLocation(project.getpLocation());
+			return "Project " + project.getpId() + " data is updated";
+		}
+	}
+	
+	public String deleteProjectById(int id) {
+		Optional<Project> optionalObj = proRepo.findById(id);
+
+		if (optionalObj.isEmpty()) {
+			return "Project " + id + " is not a part of organization";
+		} else {
+			proRepo.deleteById(id);
+			return "Project " + id + " data is deleted";
+		}
+	}
+	
+	public Project assignEmp(int projectId,int employeeId) {
+		Optional<Project> opitonalObj = proRepo.findById(projectId);
+		Project project = opitonalObj.orElseThrow(() -> new ProjectNotFoundException("Project is not available in database"));
+	    if(project.getEndDate().compareTo(LocalDate.now())>0) {
+	    	throw new ProjectNotFoundException("Project is expired. Hence employee can't be mapped");
+	    }
+	    project.seteId(employeeId);
+	    return project;
+	}
+}

@@ -1,0 +1,24 @@
+package com.springbootrelation.service;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.springbootrelation.entity.Customer;
+import com.springbootrelation.repository.CustomerRepo;
+
+@Service
+public class CustomerService {
+	
+	@Autowired
+	CustomerRepo custorepo;
+	
+	public String addCustomerInDataBase(Customer customer) {
+		if (custorepo.findById(customer.getId()).isPresent()) {
+			return "Data of the Car with Id Number  " + customer.getId() + " is already added";
+		}
+		Customer obj = customer.save(customer);
+		return "Data of the Car with Id Number " + obj.getId() + " added";
+	}
+
+}

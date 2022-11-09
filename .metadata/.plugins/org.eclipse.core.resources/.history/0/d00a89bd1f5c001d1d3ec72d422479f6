@@ -1,0 +1,28 @@
+package com.springbootrelation.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.springbootrelation.onetomany.AxisBankCards;
+import com.springbootrelation.onetomany.AxisBankCustomer;
+import com.springbootrelation.repository.AxisBankRepo;
+
+@Service
+public class AxisBankService {
+	
+	@Autowired
+	private AxisBankRepo axisrepo;
+	
+	public AxisBankCustomer addDataToDataBase(AxisBankCustomer ax) {
+		return axisrepo.save(ax);
+	}
+	
+	public List<AxisBankCards> getDataFromDataBase(int id){
+		List<AxisBankCards> cardlist =  axisrepo.findByDate();
+		return cardlist;
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.springbootrelation.repository;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import com.springbootrelation.entity.Customer;
+
+public interface CustomerRepo extends CrudRepository<Customer,Integer> {
+
+}

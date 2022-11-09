@@ -1,0 +1,11 @@
+package com.example.DTO;
+
+public class EmployeeDTO {
+
+	private int eId;
+	private String eName;
+	private int eSalary;
+	private String eSkill;
+	private String eEmail;
+	ProjectDTO projectDTO;
+}

@@ -1,0 +1,6 @@
+package com.resttemplate.entity;
+
+public class Student {
+
+	
+}

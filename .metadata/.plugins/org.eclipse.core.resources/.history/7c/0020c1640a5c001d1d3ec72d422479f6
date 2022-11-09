@@ -1,0 +1,9 @@
+package com.springbootrelation.repository;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.springbootrelation.onetomany.AxisBankCustomer;
+
+public interface AxisBankRepo extends CrudRepository<AxisBankCustomer,Integer> {
+
+}

@@ -1,0 +1,11 @@
+package com.airline.entity;
+
+public class IndigoAriline {
+
+	private int flightNumber;
+	
+	private int seatNumber;
+	private String origin;
+	private String destination;
+	private int seatAvailable;
+}

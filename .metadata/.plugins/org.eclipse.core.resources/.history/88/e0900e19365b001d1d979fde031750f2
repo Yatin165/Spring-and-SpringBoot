@@ -1,0 +1,22 @@
+package com.springbootrelation.service;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.springbootrelation.entity.Customer;
+import com.springbootrelation.repository.CustoRepo;
+
+@Service
+public class CustoService {
+	
+	@Autowired
+	CustoRepo custorepo;
+	
+	public Customer addCustomerInDataBase(Customer customer) {
+		
+		Customer saveobj = (Customer) custorepo.save(customer);
+		return saveobj;
+	}
+
+}

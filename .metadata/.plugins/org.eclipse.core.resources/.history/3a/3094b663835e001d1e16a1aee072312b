@@ -1,0 +1,19 @@
+package com.airline.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.airline.entity.IndigoAirline;
+import com.airline.repository.IndigoAirlineRepository;
+
+@Service
+public class IndigoAirlineService {
+	
+	@Autowired
+	IndigoAirlineRepository airRepository;
+	
+	public IndigoAirline addDataToDataBase(IndigoAirline payload) {
+		return airRepository.save(payload);
+	}
+
+}

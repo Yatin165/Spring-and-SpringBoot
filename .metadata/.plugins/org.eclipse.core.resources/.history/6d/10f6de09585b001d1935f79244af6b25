@@ -1,0 +1,8 @@
+package com.springbootrelation.manytooneentity;
+
+public class Customer {
+
+	private int customerid;
+	private String emailid;
+	private String name;
+}

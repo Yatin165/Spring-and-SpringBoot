@@ -1,0 +1,78 @@
+package com.example.service;
+
+import java.util.Optional;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+import com.example.entity.Employee;
+import com.example.exception.MyException;
+import com.example.repository.EmpRepository;
+
+@Service
+public class EmpService {
+
+	@Autowired
+	RestTemplate restTemplate;
+
+	@Autowired
+	EmpRepository emprepo;
+
+	public String addEmployee(Employee emp) {
+		if (emprepo.findById(emp.geteId()).isPresent()) {
+			throw new MyException("Employee with id " + emp.geteId() + " is already present in database");
+		}
+		Employee saveobj = emprepo.save(emp);
+		return "Data of the person " + saveobj.geteName() + " added";
+	}
+
+	public Object getEmployeeByEmployeeId(int id) {
+		Optional<Employee> optionalEmp = emprepo.findById(id);
+		if (optionalEmp.isPresent()) {
+			Employee employee = optionalEmp.get();
+			return employee;
+		} else {
+			Employee employee = optionalEmp.get();
+			throw new MyException("Employee with id " + employee.geteId() + " is not present in database");
+		}
+	}
+
+	@Transactional
+	public String updateDataofEmployee(Employee emp) {
+		Optional<Employee> optionalEmp = emprepo.findById(emp.geteId());
+		if (optionalEmp.isEmpty()) {
+			return "Employee " + emp.geteId() + " is not a part of organization";
+		} else {
+			Employee employeeInDB = optionalEmp.get();
+			employeeInDB.seteName(emp.geteName());
+			employeeInDB.seteEmail(emp.geteEmail());
+			employeeInDB.seteSkill(emp.geteSkill());
+			employeeInDB.seteSalary(emp.geteSalary());
+			return "Employee " + emp.geteId() + " data is updated";
+		}
+	}
+
+	public String deleteEmployeeById(int id) {
+		Optional<Employee> optionalEmp = emprepo.findById(id);
+
+		if (optionalEmp.isEmpty()) {
+			throw new MyException("Employee " + " is not present in database");
+		} else {
+			emprepo.deleteById(id);
+			return "Employee " + id + " data is deleted";
+		}
+	}
+
+	public Employee assignEmployeeToProject(int id) {
+		Optional<Employee> optionalEmp = emprepo.findById(id);
+		if (optionalEmp.isPresent()) {
+			Employee employee = restTemplate.postForObject("http://localhost:9091/project", id, Employee.class);
+			return employee;
+		} else {
+			return null;
+		}
+	}
+
+}

@@ -1,0 +1,91 @@
+2022-10-31 10:25:04 [restartedMain] INFO  c.example.SpringbootdemoApplication - Starting SpringbootdemoApplication using Java 17.0.4.1 on WIN-CUJ2T2Q6MFC with PID 3588 (F:\Projects\Telus Spring Boot\springbootdemo\target\classes started by Administrator in F:\Projects\Telus Spring Boot\springbootdemo)
+2022-10-31 10:25:04 [restartedMain] INFO  c.example.SpringbootdemoApplication - No active profile set, falling back to 1 default profile: "default"
+2022-10-31 10:25:04 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-31 10:25:04 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-31 10:25:08 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-10-31 10:25:08 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-10-31 10:25:08 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-31 10:25:08 [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-10-31 10:25:08 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-10-31 10:25:08 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4057 ms
+2022-10-31 10:25:09 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2022-10-31 10:25:09 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-31 10:25:09 [restartedMain] INFO  c.example.SpringbootdemoApplication - Started SpringbootdemoApplication in 7.039 seconds (JVM running for 10.612)
+2022-10-31 10:25:10 [restartedMain] INFO  c.example.SpringbootdemoApplication - runner
+2022-10-31 10:28:53 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2022-10-31 10:28:54 [Thread-5] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2022-10-31 10:28:55 [restartedMain] INFO  c.example.SpringbootdemoApplication - Starting SpringbootdemoApplication using Java 17.0.4.1 on WIN-CUJ2T2Q6MFC with PID 3588 (F:\Projects\Telus Spring Boot\springbootdemo\target\classes started by Administrator in F:\Projects\Telus Spring Boot\springbootdemo)
+2022-10-31 10:28:55 [restartedMain] INFO  c.example.SpringbootdemoApplication - No active profile set, falling back to 1 default profile: "default"
+2022-10-31 10:28:56 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-10-31 10:28:56 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-10-31 10:28:56 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-31 10:28:56 [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-10-31 10:28:56 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-10-31 10:28:56 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 741 ms
+2022-10-31 10:28:56 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2022-10-31 10:28:57 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-31 10:28:57 [restartedMain] INFO  c.example.SpringbootdemoApplication - Started SpringbootdemoApplication in 1.409 seconds (JVM running for 237.768)
+2022-10-31 10:28:57 [restartedMain] INFO  c.example.SpringbootdemoApplication - runner
+2022-10-31 10:28:57 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2022-10-31 10:28:58 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 6 class path changes (0 additions, 0 deletions, 6 modifications)
+2022-10-31 10:28:58 [Thread-7] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2022-10-31 10:28:58 [restartedMain] INFO  c.example.SpringbootdemoApplication - Starting SpringbootdemoApplication using Java 17.0.4.1 on WIN-CUJ2T2Q6MFC with PID 3588 (F:\Projects\Telus Spring Boot\springbootdemo\target\classes started by Administrator in F:\Projects\Telus Spring Boot\springbootdemo)
+2022-10-31 10:28:58 [restartedMain] INFO  c.example.SpringbootdemoApplication - No active profile set, falling back to 1 default profile: "default"
+2022-10-31 10:28:58 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-10-31 10:28:59 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-10-31 10:28:59 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-31 10:28:59 [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-10-31 10:28:59 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-10-31 10:28:59 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1284 ms
+2022-10-31 10:29:00 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2022-10-31 10:29:00 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-31 10:29:00 [restartedMain] INFO  c.example.SpringbootdemoApplication - Started SpringbootdemoApplication in 1.547 seconds (JVM running for 240.667)
+2022-10-31 10:29:00 [restartedMain] INFO  c.example.SpringbootdemoApplication - runner
+2022-10-31 10:29:00 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2022-10-31 10:29:52 [restartedMain] INFO  c.example.SpringbootdemoApplication - Starting SpringbootdemoApplication using Java 17.0.4.1 on WIN-CUJ2T2Q6MFC with PID 3812 (F:\Projects\Telus Spring Boot\springbootdemo\target\classes started by Administrator in F:\Projects\Telus Spring Boot\springbootdemo)
+2022-10-31 10:29:52 [restartedMain] INFO  c.example.SpringbootdemoApplication - No active profile set, falling back to 1 default profile: "default"
+2022-10-31 10:29:52 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-31 10:29:52 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-31 10:29:54 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-10-31 10:29:54 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-10-31 10:29:54 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-31 10:29:55 [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-10-31 10:29:55 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-10-31 10:29:55 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3180 ms
+2022-10-31 10:29:56 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2022-10-31 10:29:56 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2022-10-31 10:29:56 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2022-10-31 10:29:56 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-10-31 10:29:56 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2022-10-31 10:34:27 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2022-10-31 10:34:27 [Thread-11] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2022-10-31 10:34:27 [restartedMain] INFO  c.example.SpringbootdemoApplication - Starting SpringbootdemoApplication using Java 17.0.4.1 on WIN-CUJ2T2Q6MFC with PID 3588 (F:\Projects\Telus Spring Boot\springbootdemo\target\classes started by Administrator in F:\Projects\Telus Spring Boot\springbootdemo)
+2022-10-31 10:34:27 [restartedMain] INFO  c.example.SpringbootdemoApplication - No active profile set, falling back to 1 default profile: "default"
+2022-10-31 10:34:28 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-10-31 10:34:28 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-10-31 10:34:28 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-31 10:34:28 [restartedMain] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-10-31 10:34:28 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-10-31 10:34:28 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 410 ms
+2022-10-31 10:34:28 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2022-10-31 10:34:28 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-31 10:34:28 [restartedMain] INFO  c.example.SpringbootdemoApplication - Started SpringbootdemoApplication in 0.727 seconds (JVM running for 569.061)
+2022-10-31 10:34:28 [restartedMain] INFO  c.example.SpringbootdemoApplication - runner
+2022-10-31 10:34:28 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2022-10-31 10:35:04 [RMI TCP Connection(21)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2022-10-31 10:35:04 [RMI TCP Connection(21)-127.0.0.1] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]

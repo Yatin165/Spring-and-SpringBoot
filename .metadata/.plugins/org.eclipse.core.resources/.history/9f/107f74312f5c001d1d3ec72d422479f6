@@ -1,0 +1,91 @@
+package com.springbootrelation.service;
+
+import java.time.LocalDate;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.springbootrelation.onetomany.AxisBankCards;
+import com.springbootrelation.onetomany.AxisBankCustomer;
+import com.springbootrelation.repository.AxisBankRepo;
+
+@Service
+public class AxisBankService {
+	
+	@Autowired
+	private AxisBankRepo axisrepo;
+	
+	public AxisBankCustomer addDataToDataBase(AxisBankCustomer ax) {
+		return axisrepo.save(ax);
+	}
+	
+/*	public AxisBankCustomer getDataFromDataBase(int id){
+		Optional<AxisBankCustomer> oplist = axisrepo.findById(id);
+		AxisBankCustomer cust = oplist.get();
+		List<AxisBankCards> list = cust.getCardlist();
+		List<AxisBankCards> validlist = list.stream().filter(card->card.getExpirydate().compareTo(LocalDate.now())>0).collect(Collectors.toList);
+	} */
+
+//	public String updateDataIntoDataBase(AxisBankCustomer  payload) {
+//		Optional<AxisBankCustomer> optionalobj = axisrepo.findById(payload.getAxisbankcustomerid());
+//		AxisBankCustomer existingcustomer = optionalobj.get();
+//		
+//		if(payload.getEmailid() != null  || payload.getName() != null ) {
+//		
+//		 	return "Data is updated for " + existingcustomer.getAxisbankcustomerid();
+//		}else {
+//			return "No data was updated";
+//		}
+//	}
+	
+	
+	@Transactional
+	public AxisBankCustomer updateCardDetails(AxisBankCustomer customerFromPayload) {
+
+		Optional<AxisBankCustomer> optionalCustomerFromDB = axisRepo.findById(customerFromPayload.getcId());
+		if (optionalCustomerFromDB.isPresent()) {
+			// object we got from customer
+			AxisBankCustomer customerFromDB = optionalCustomerFromDB.get();
+			// customerFromDB.setcId(customerFromPayload.getcId());
+			if (customerFromPayload.getName() != null) {
+				customerFromDB.setName(customerFromPayload.getName());
+			}
+			if (customerFromPayload.getEmail() != null) {
+				customerFromDB.setEmail(customerFromPayload.getEmail());
+			}
+			// got this list from payload
+			List<AxisBankCard> cardsToUpdate = customerFromPayload.getListOfCards();
+			if (cardsToUpdate != null) {
+				// filter card ids of all cards to be updated given in the payload
+
+				List<Integer> listOfCardIds = cardsToUpdate.stream().map(e -> e.getCardId())
+						.collect(Collectors.toList());
+
+				// all cards from database stored in the cardsFromDB list
+				List<AxisBankCard> cardsFromDB = customerFromDB.getListOfCards();
+				// filter cards to be updated using their ids
+				List<AxisBankCard> cardsFromDBToUpdate = cardsFromDB.stream()
+						.filter(card -> listOfCardIds.contains(card.getCardId())).collect(Collectors.toList());
+
+				for (AxisBankCard card : cardsToUpdate) {
+					AxisBankCard dbCard = cardsFromDBToUpdate.stream()
+							.filter(cardInDB -> cardInDB.getCardId() == (card.getCardId())).findFirst().get();
+					if (card.getCardType() != null) {
+						dbCard.setCardType(card.getCardType());
+					}
+					if (card.getExpDate() != null) {
+						dbCard.setExpDate(card.getExpDate());
+					}
+					if (card.getIssueDate() != null) {
+						dbCard.setIssueDate(card.getIssueDate());
+					}
+				}
+			}
+			return customerFromDB;
+		}
+		return null;
+	}
+}

@@ -1,0 +1,56 @@
+package com.passenger.service;
+
+import java.util.Optional;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.passenger.entity.Passenger;
+import com.passenger.repository.PassengerRepository;
+
+@Service
+public class PassengerService {
+	
+	@Autowired
+	PassengerRepository passengerRepository;
+	
+
+	public Passenger addDataToDatabase(Passenger payload) {
+	        return passengerRepository.save(payload);
+
+	}
+
+/*	public Employee getEmpDataFromDB(Employee emp) {
+		Optional<Employee> optionalEmp = emprepo.findById(emp.getEid());
+		System.out.println(optionalEmp);
+		Employee employee = optionalEmp.get();
+		return employee;
+	}
+
+	@Transactional
+	public String updateDataofEmp(Employee emp) {
+		Optional<Employee> optionalEmp = emprepo.findById(emp.getEid());
+		if (optionalEmp.isEmpty()) {
+			return "Employee " + emp.getEid() + " is not a part of organization";
+		} else {
+			Employee employeeInDB = optionalEmp.get();
+			employeeInDB.setName(emp.getName());
+			employeeInDB.setSkills(emp.getSkills());
+			employeeInDB.setAddr(emp.getAddr());
+			return "Employee " + emp.getEid() + " data is updated";
+		}
+	}
+
+	public String deleteDataofEmp(int id) {
+		Optional<Employee> optionalEmp = emprepo.findById(id);
+
+		if (optionalEmp.isEmpty()) {
+			return "Employee " + id + " is not a part of organization";
+		} else {
+			emprepo.deleteById(id);
+			return "Employee " + id + " data is deleted";
+		}
+	}*/
+}

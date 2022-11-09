@@ -1,0 +1,5 @@
+package com.passenger.dto;
+
+public class AddressDTO {
+
+}

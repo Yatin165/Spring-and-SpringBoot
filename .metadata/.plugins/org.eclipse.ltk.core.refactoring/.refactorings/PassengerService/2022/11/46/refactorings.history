@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.passenger.dto.IndigoAirline&apos; to &apos;IndigoAirlineDTO&apos;&#x0D;&#x0A;- Original project: &apos;PassengerService&apos;&#x0D;&#x0A;- Original element: &apos;com.passenger.dto.IndigoAirline&apos;&#x0D;&#x0A;- Renamed element: &apos;com.passenger.dto.IndigoAirlineDTO&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;IndigoAirline&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.passenger.dto{IndigoAirline.java[IndigoAirline" matchStrategy="1" name="IndigoAirlineDTO" qualified="false" references="true" similarDeclarations="false" stamp="1667821545350" textual="false" version="1.0"/>
+</session>

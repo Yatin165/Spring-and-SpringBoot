@@ -1,0 +1,43 @@
+package com.springbootrelation.manytooneentity;
+
+import java.time.LocalDate;
+
+public class Loan {
+	private int loanid;
+	private long amount;
+	private LocalDate issuedDate;
+	private Customer customer;
+	private String status;
+	
+	
+	public int getLoanid() {
+		return loanid;
+	}
+	public void setLoanid(int loanid) {
+		this.loanid = loanid;
+	}
+	public long getAmount() {
+		return amount;
+	}
+	public void setAmount(long amount) {
+		this.amount = amount;
+	}
+	public LocalDate getIssuedDate() {
+		return issuedDate;
+	}
+	public void setIssuedDate(LocalDate issuedDate) {
+		this.issuedDate = issuedDate;
+	}
+	public Customer getCustomer() {
+		return customer;
+	}
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+}

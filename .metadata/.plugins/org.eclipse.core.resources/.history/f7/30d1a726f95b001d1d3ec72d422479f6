@@ -1,0 +1,8 @@
+package com.springbootrelation.onetomany;
+
+public class AxisBankCards {
+
+	private String cardnumber;
+	private String issuedate;
+	private String expirydate;
+}

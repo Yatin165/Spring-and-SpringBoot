@@ -1,0 +1,58 @@
+package com.passenger.entity;
+
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import com.passenger.dto.AddressDTO;
+import com.passenger.dto.PassengerDTO;
+
+@Entity
+public class Passenger {
+	
+	@Id
+	private int id;
+	private String name;
+	private int phoneNumber;
+	@Embedded
+	Address address;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getPhoneNumber() {
+		return phoneNumber;
+	}
+	public void setPhoneNumber(int phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+	
+	public PassengerDTO convertToDTO(Passenger passenger) {
+		PassengerDTO passengerDTO = new PassengerDTO();
+		passengerDTO.setId(passenger.getId());
+		passengerDTO.setName(passenger.getName());
+		passengerDTO.setPhoneNumber(passenger.getPhoneNumber());
+		AddressDTO addrDTO = new AddressDTO();
+		addrDTO.setCity(passenger.getAddress().getCity());
+		addrDTO.setPincode(passenger.getAddress().getPincode());
+	    addrDTO.setState(passenger.getAddress().getState());	
+	    passengerDTO.setAddrdto(addrDTO);
+	    return passengerDTO;
+	}
+
+}

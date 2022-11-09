@@ -1,0 +1,39 @@
+package com.springbootrelation.onetomany;
+
+import java.util.List;
+
+public class AxisBankCustomer {
+	
+	private int axisbankcustomerid;
+	private String name;
+	private String emailid;
+	private List<AxisBankCards> cardlist;
+	
+	
+	
+	public int getAxisbankcustomerid() {
+		return axisbankcustomerid;
+	}
+	public void setAxisbankcustomerid(int axisbankcustomerid) {
+		this.axisbankcustomerid = axisbankcustomerid;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getEmailid() {
+		return emailid;
+	}
+	public void setEmailid(String emailid) {
+		this.emailid = emailid;
+	}
+	public List<AxisBankCards> getCardlist() {
+		return cardlist;
+	}
+	public void setCardlist(List<AxisBankCards> cardlist) {
+		this.cardlist = cardlist;
+	} 
+
+}

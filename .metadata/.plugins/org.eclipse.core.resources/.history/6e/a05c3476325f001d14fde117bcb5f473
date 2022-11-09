@@ -1,0 +1,20 @@
+package com.resttemplate.controller;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.passenger.entity.Passenger;
+import com.resttemplate.entity.Student;
+import com.resttemplate.service.StudentService;
+
+@RestController
+public class RestTemplateController {
+	
+	StudentService stservice;
+
+	@PostMapping("/passenger")
+	public RestTemplateController addData(@RequestBody Student payload) {
+		return stservice.addDataToDatabase(payload);
+	}
+}

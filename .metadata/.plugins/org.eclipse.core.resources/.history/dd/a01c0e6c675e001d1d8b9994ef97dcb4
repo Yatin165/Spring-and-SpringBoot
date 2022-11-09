@@ -1,0 +1,53 @@
+package com.airline.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class IndigoAirline {
+
+	@Id
+	private int flightNumber;
+	private int passengerNumber;
+	private int seatNumber;
+	private String origin;
+	private String destination;
+	private int seatAvailable;
+
+	public int getFlightNumber() {
+		return flightNumber;
+	}
+	public void setFlightNumber(int flightNumber) {
+		this.flightNumber = flightNumber;
+	}
+	public int getPassengerNumber() {
+		return passengerNumber;
+	}
+	public void setPassengerNumber(int passengerNumber) {
+		this.passengerNumber = passengerNumber;
+	}
+	public int getSeatNumber() {
+		return seatNumber;
+	}
+	public void setSeatNumber(int seatNumber) {
+		this.seatNumber = seatNumber;
+	}
+	public String getOrigin() {
+		return origin;
+	}
+	public void setOrigin(String origin) {
+		this.origin = origin;
+	}
+	public String getDestination() {
+		return destination;
+	}
+	public void setDestination(String destination) {
+		this.destination = destination;
+	}
+	public int getSeatAvailable() {
+		return seatAvailable;
+	}
+	public void setSeatAvailable(int seatAvailable) {
+		this.seatAvailable = seatAvailable;
+	}
+}

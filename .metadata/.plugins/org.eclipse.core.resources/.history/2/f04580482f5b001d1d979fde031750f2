@@ -1,0 +1,5 @@
+package com.springbootrelation.repository;
+
+public interface CustoRepo extends {
+
+}

@@ -1,0 +1,44 @@
+package com.springbootrelation.service;
+
+import java.time.LocalDate;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.springbootrelation.onetomany.AxisBankCards;
+import com.springbootrelation.onetomany.AxisBankCustomer;
+import com.springbootrelation.repository.AxisBankRepo;
+
+@Service
+public class AxisBankService {
+	
+	@Autowired
+	private AxisBankRepo axisrepo;
+	
+	public AxisBankCustomer addDataToDataBase(AxisBankCustomer ax) {
+		return axisrepo.save(ax);
+	}
+	
+/*	public AxisBankCustomer getDataFromDataBase(int id){
+		Optional<AxisBankCustomer> oplist = axisrepo.findById(id);
+		AxisBankCustomer cust = oplist.get();
+		List<AxisBankCards> list = cust.getCardlist();
+		List<AxisBankCards> validlist = list.stream().filter(card->card.getExpirydate().compareTo(LocalDate.now())>0).collect(Collectors.toList);
+	} */
+
+	public String updateDataIntoDataBase(AxisBankCustomer  axb) {
+		Optional<AxisBankCustomer> axobj = axisrepo.findById(axb.getAxisbankcustomerid());
+		AxisBankCustomer acust = axobj.get();
+		
+		if(acust.getEmailid() != null || acust.getName() != null) {
+		 	axisrepo.save(acust);
+		 	return "Data is updated";
+		}else {
+			return "No data wast updated";
+		}
+		
+	}
+}

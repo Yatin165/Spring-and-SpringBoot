@@ -1,0 +1,16 @@
+package com.example.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+@Service
+public class ConsumerService {
+
+	@Autowired
+	RestTemplate restTemplate;
+	
+	public Student fetchStudentFromAPIwithId(int id) {
+		Student student = restTemplate.getForObject("http://lcalhost:"9999/studnet/{id}", Stduent.class,id)
+	}
+}
